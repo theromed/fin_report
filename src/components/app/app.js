@@ -32,10 +32,10 @@ export default class App extends Component {
     this.setState(({reportData}) => {
       const idx = reportData.findIndex((el) => el.id === id);
 
-      const newArray = [...reportData.slice(0, idx), ...reportData.slice(idx + 1)];
+      const newReport = [...reportData.slice(0, idx), ...reportData.slice(idx + 1)];
 
       return {
-        reportData: newArray
+        reportData: newReport
       }
     })
   };
