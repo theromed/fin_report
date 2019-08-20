@@ -23,17 +23,18 @@ export default class ReportListItem extends Component {
         </button>
 
 
-        {goal ? (
+        <GoalReached goal={goal}/>
 
-          <i className="fa fa-thumbs-up match"/>
-
-        ) : (
-
-          <i className="fa fa-thumbs-down notMatch "/>
-
-        )}
        </span>
     );
   };
 }
 
+
+const GoalReached = ({goal}) => {
+  if (goal) {
+    return (<i className="fa fa-thumbs-up match"/>);
+  } else {
+    return (<i className="fa fa-thumbs-down notMatch "/>);
+  }
+};
