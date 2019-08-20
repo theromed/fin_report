@@ -10,9 +10,7 @@ export default class ReportListItem extends Component {
     return (
       <span className='report-list-line'>
         <span className="report-list-item-name">
-            {id} {}
-          {name} {}
-          {value}
+          {id} {name} {value}
         </span>
 
 
