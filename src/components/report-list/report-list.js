@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Coefficient from './report-list-item';
+import {Coefficient} from './coefficient';
 import './report-list.css';
 
 const ReportList = ({report, onDeleted}) => {

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './report-list-item.css';
 
 
-export default class ReportListItem extends Component {
+export class Coefficient extends Component {
 
   render() {
     const {id, name, value, goal, onDeleted} = this.props;
