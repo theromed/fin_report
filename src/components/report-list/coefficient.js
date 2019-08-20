@@ -13,13 +13,11 @@ export class Coefficient extends Component {
           {id} {name} {value}
         </span>
 
-
         <button type="button"
                 className="btn btn-outline-warning btn-sm float-right"
                 onClick={onDeleted}>
           <i className="fa fa-trash-o"/>
         </button>
-
 
         <GoalReached goal={goal}/>
 
