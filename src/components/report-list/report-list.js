@@ -5,7 +5,7 @@ import './report-list.css';
 
 const ReportList = ({report, onDeleted}) => {
 
-  const elements = report.map(item => (
+  const coefficients = report.map(item => (
     <div key={item.id} className='list-group-item'>
       <ReportListItem {...item}
                       onDeleted={() => onDeleted(item.id)}
@@ -15,7 +15,7 @@ const ReportList = ({report, onDeleted}) => {
 
   return (
     <ul className="list-group report-list">
-      {elements}
+      {coefficients}
     </ul>
   )
 };
