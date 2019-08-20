@@ -21,10 +21,10 @@ export default class App extends Component {
 
   createReportItem(name, goal, value) {
     return {
+      id: this.maxId++,
       name,
       goal,
       value,
-      id: this.maxId++,
     }
   };
 
