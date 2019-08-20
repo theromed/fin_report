@@ -5,7 +5,7 @@ import './report-list-item.css';
 export default class ReportListItem extends Component {
 
   render() {
-    const {name, value, goal, id, onDeleted} = this.props;
+    const {id, name, value, goal, onDeleted} = this.props;
 
     return (
       <span className='report-list-line'>
