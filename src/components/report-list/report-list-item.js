@@ -17,7 +17,7 @@ export default class ReportListItem extends Component {
         <button type="button"
                 className="btn btn-outline-warning btn-sm float-right"
                 onClick={onDeleted}>
-                <i className="fa fa-trash-o"/>
+          <i className="fa fa-trash-o"/>
         </button>
 
 
