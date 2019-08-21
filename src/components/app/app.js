@@ -8,54 +8,54 @@ import './app.css'
 
 export default class App extends Component {
 
-    maxId = 1;
+  maxId = 1;
 
-    state = {
-        reportData: [
-            this.createReportItem('Название коэффициента', true, 5.55),
-            this.createReportItem('Другое коэффициента', false, 2.66),
-            this.createReportItem('Сложное коэффициента', true, 0.55),
-        ],
+  state = {
+    reportData: [
+      this.createReportItem('Название коэффициента', true, 5.55),
+      this.createReportItem('Другое коэффициента', false, 2.66),
+      this.createReportItem('Сложное коэффициента', true, 0.55),
+    ],
 
-    };
+  };
 
-    createReportItem(name, goal, value) {
-        return {
-            name,
-            goal,
-            value,
-            id: this.maxId++
-        }
-    };
+  createReportItem(name, goal, value) {
+    return {
+      id: this.maxId++,
+      name,
+      goal,
+      value,
+    }
+  };
 
-    deleteItem = (id) => {
-        this.setState(({reportData}) => {
-            const idx = reportData.findIndex((el) => el.id === id);
+  deleteItem = (id) => {
+    this.setState(({reportData}) => {
+      const idx = reportData.findIndex((el) => el.id === id);
 
-            const newArray = [...reportData.slice(0, idx), ...reportData.slice(idx + 1)];
+      const newReport = [...reportData.slice(0, idx), ...reportData.slice(idx + 1)];
 
-            return {
-                reportData: newArray
-            }
-        })
-    };
+      return {
+        reportData: newReport
+      }
+    })
+  };
 
 
-    render() {
-        const {reportData} = this.state;
+  render() {
+    const {reportData} = this.state;
 
-        const dataLine = reportData;
+    return (
+      <div className='report-app'>
 
-        return (
-            <div className='report-app'>
+        <ReportList report={reportData}
+                    onDeleted={this.deleteItem}
+        />
 
-                <ReportList report={dataLine}
-                          onDeleted={this.deleteItem}
-                          />
-                <AddButton />
-            </div>
-        )
+        <AddButton/>
 
-    };
+      </div>
+    )
+
+  };
 }
 
