@@ -1,0 +1,31 @@
+.report-list-line {
+  font-size: 1.25rem;
+}
+
+.report-list-item-name {
+  margin-left: 1.25rem;
+  line-height: 35px;
+
+}
+
+
+.report-list-item button {
+  width: 35px;
+  margin: 3px;
+}
+
+
+.match {
+  width: 35px;
+  margin: 3px;
+  color: green;
+  float: right;
+
+}
+
+.notMatch {
+  width: 35px;
+  margin: 3px;
+  color: red;
+  float: right;
+}
